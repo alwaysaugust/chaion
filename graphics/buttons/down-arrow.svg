@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_v4@2x" transform="translate(-708.000000, -636.000000)" fill="#FFFFFF">
+            <g id="Text_box1" transform="translate(486.000000, 351.000000)">
+                <g id="Group" transform="translate(222.000000, 285.000000)">
+                    <path d="M7.056,10.224 C6.888,10.392 6.888,10.68 7.056,10.848 L12,15.792 L16.944,10.848 C17.04,10.752 17.064,10.656 17.064,10.536 C17.064,10.416 17.04,10.32 16.944,10.224 C16.776,10.056 16.488,10.056 16.32,10.224 L12,14.544 L7.68,10.224 C7.512,10.056 7.224,10.056 7.056,10.224 Z" id="Path"></path>
+                    <path d="M0,12 C0,18.624 5.376,24 12,24 C18.624,24 24,18.624 24,12 C24,5.376 18.624,0 12,0 C5.376,0 0,5.376 0,12 Z M23.112,12 C23.112,18.12 18.12,23.112 12,23.112 C5.88,23.112 0.888,18.12 0.888,12 C0.888,5.88 5.88,0.888 12,0.888 C18.12,0.888 23.112,5.88 23.112,12 Z" id="Shape" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

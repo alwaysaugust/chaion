@@ -1,0 +1,170 @@
+
+{ "news": [ 
+
+    { 
+     "date": "Jan. 14, 2019",
+     "title": "Rebuild Conference: Genesis 2019",
+     "text": { "en": "The 2019 Rebuild Conference is an event with presenters from multiple blockchain projects, thought leaders, investors, and academia. We want to invite the likeminded individuals and make it a more collaborative industry effort and discuss technical breakthroughs and challenges across the blockchain industry.",
+               "chinese": "2019年Rebuild会议是一个由众多区块链项目、领袖者、投资者和学术界的演讲者们共同参与举办的大型活动，我们诚挚的邀请各位与我们一起讨论区块链行业的技术突破之处以及未来所面临的挑战，努力使其成为更具有发展潜力的行业。"
+      },
+     "link": "https://aion.network/"
+     },
+    { 
+     "date": "Feb. 18, 2018",
+     "title": "Chaion Technology",
+     "text": { "en": "Chaion is founded at May 2018. Our objective is to work on adoption blockchain technology to every field of work and support diverse Aion ecosystem oriented projects. ",
+               "chinese": "埃诺鞍（上海）信息科技有限公司(Chaion (Shanghai) Information Technology Co.,Ltd.)成立于2018年5月。作为Aion生态圈重要的工程力量，我们旨在帮助区块链在各行业中的整合， 同时支持Aion生态系统相关项目开发和部署。"
+              
+             },
+     "link": "https://forum.chaion.net/"
+     },
+    { 
+     "date": "Jan. 24, 2018",
+     "title": "Say Hello to Aion Rust Kernel",
+     "text": { "en": "Chaion proudly announces the achievement of secondary implementation completed in rust lang to the Aion community. Duel-kernels opens the door for diverse enhancement at the module level. Also it provides a larger surface area for non-core contributors to push improvements that make their way into other kernel implementations.", 
+               "chinese": "Chaion工程团队向Aion社区提交了用rust语言构建的节点代码库。多版本的实现为版本间模块优化以及为非核心开发人员对Aion共识规范上提出建议乃至克制化提供可行性和多项选择。" 
+       },
+     "link": "https://blog.aion.network/announcing-the-aion-kernel-in-rust-fbdd7971c632"
+     }
+
+
+
+
+  ] , 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+
+ 
+ "offer": [
+     
+     {
+      "title": "Consulting",
+      "text": { "en": "CHAION helps your organization build decentralised applications on the Aion Blockchain and provides industry consulting. We aim to expand Aion's ecosystem by offering professional techincal supports for building development toolings, rubust and interoperable dapps on Aion network。",
+                "chinese": "CHAION帮助您的企业在Aion区块链上构建分布式的应用程序并提供专业化的行业咨询。我们致力于通过提供专业性的技术服务与工具来扩大Aion强大与可互操作性的生态系统。"
+              },
+       "pic": "pics/pic-3.jpg"
+    
+     },
+     { "title": "Core Development",
+       "text": { "en": "We maintain a strong core team for rust kernel development which strickly follows Aion blockchain spec. The Aion network kernel is supporting two clients right now, one is the Java client and the other one is the Rust client. This is a creative blockchain infrastructure which is designed to provide a secure, scalable and interopeable blockchain solution. Aion rust kernel is developed by Chaion's core development team. To become a global blockchain technology company, the team consistently adhere to the autonomous code + open source route.",
+                 "chinese": "我们拥有强大的核心团队，严格遵循Aion区块链规范进行Rust内核开发。这是一个具有创造性的底层基础架构，旨在提供一个安全、分散和可伸缩的区块链解决方案。我们始终坚持自主代码+开源路线，成为世界级区块链技术公司。"
+               },
+      "pic": "pics/pic-2.jpg"
+     },
+     {
+      "title": "Build dApps",
+      "text": { "en": "Besides rock-like knowledge of aion kernel, production team at Chaion comes from industrial applications development background. We aim to complete and extend aion's ecosystem. Not only from internal, we also love to deliver assistance to third parties to join us including dapp development, contract tooling and possible finacial support.",
+                "chinese": "除了Aion内核外，Chaion团队还具有专业化的应用开发的背景。我们的目标是不断开拓Aion生态系统。不仅仅对Aion,我们也为更多的第三方企业提供服务，包括dapp开发，工具开发以及财务等多行业领域的支持。"
+              },
+      "pic": "pics/pic-1.jpg"
+     }
+     
+     
+     
+ ], 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ "roadmap": [{ "projection": "May 2018 to January 2019",
+               "tech": "Aion Rust Kernel (Version:0.1.1)",
+               "release": " Release Date: Jan 23, 2019",
+               "icon": "graphics/icons/roadmap/icon-1.svg",
+               "info": { "en": "A second build of the Aion Kernel to supplement our Java implementation. The implementation of multiple kernels opens the door for diverse enhancement at the module level.",
+                        "chinese": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+                       },
+               "link": "https://github.com/aionnetwork/aionr"
+             },
+             { "projection": "January 2019 to Present",
+               "tech": "Aion Wallet App (Demo version)",
+               "release": "Release Date: March 2019 ",
+               "icon": "graphics/icons/roadmap/icon-2.svg",
+               "info": { "en": "More details coming soon.",
+                        "chinese": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+                       },
+               "link": "https://github.com/chaion/wallet"
+             }
+            
+            
+            ], 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+            
+ 
+ 
+ 
+ 
+ "team": [ 
+           {"pic": "pics/team/engineer - Camus Qiu.png",
+            "role": "Engineer",
+            "name": "Camus Qiu"
+           },
+           {"pic": "pics/team/Carrie Fu - Marketing Specialist.png",
+            "role": "Marketing Specialist",
+            "name": "Carrie Fu "
+           },
+           {"pic": "pics/team/engineer - Chen Cheng.png",
+            "role": "Engineer",
+            "name": "Chen Cheng"
+           },
+           {"pic": "pics/team/engineer-Chris Lin.png",
+            "role": "Engineer",
+            "name": "Chris Lin"
+           },
+           {"pic": "pics/team/Derek Tang-Country manager.png",
+            "role": "Country manager",
+            "name": "Derek Tang"
+           },
+           {"pic": "pics/team/engineer - Frederic Zha.png",
+            "role": "Engineer",
+            "name": "Frederic Zha"
+           },
+           {"pic": "pics/team/engineer - JiaLiang Shang.png",
+            "role": "Engineer",
+            "name": "JiaLiang Shang"
+           },
+           {"pic": "pics/team/engineer-Leo Ren.png",
+            "role": "Engineer",
+            "name": "Leo Ren"
+           },
+           {"pic": "pics/team/engineer QA-Miao Shi.png",
+            "role": "Engineer QA",
+            "name": "Miao Shi"
+           },
+           {"pic": "pics/team/engineer team lead-Savage Li.png",
+            "role": "Engineer Team Lead",
+            "name": "Savage Li"
+           },
+           {"pic": "pics/team/Vicky Xue - Office Admin.png",
+            "role": "Office Admin",
+            "name": "Vicky Xue"
+           },
+           {"pic": "pics/team/engineer - YuanJun Li.png",
+            "role": "Engineer",
+            "name": "YuanJun Li"
+           }
+        
+          ]
+                 
+
+ 
+ 
+
+} 

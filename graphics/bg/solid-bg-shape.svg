@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="976px" height="409px" viewBox="0 0 976 409" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M2.7,2 L917.3,2 C918.791169,2 920,3.20883118 920,4.7 L920,289.652112 C920,290.998449 919.008148,292.139048 917.674849,292.325964 L463.142071,356.047214 L2.33014089,292.322232 C0.994598915,292.137542 -3.48444917e-13,290.995936 -3.4861003e-13,289.647684 L-3.97459843e-13,4.7 C-3.97642458e-13,3.20883118 1.20883118,2 2.7,2 Z" id="path-1"></path>
+        <filter x="-4.7%" y="-11.6%" width="109.3%" height="124.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="14" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0946841033 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_v4@2x" transform="translate(-229.000000, -771.000000)">
+            <g id="Card" transform="translate(257.000000, 795.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#0D2342" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
