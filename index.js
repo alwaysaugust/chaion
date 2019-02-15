@@ -423,6 +423,7 @@ $( "body" ).on( "click", ".toggle_button", function(){
 // move card 
 function move_card(direction){
     
+ $( ".card_row" ).removeClass( "slide_up_fade_2" ).removeAttr( "data-check-visibility" );
     
  if ( direction == "right" ){
      
@@ -680,7 +681,7 @@ function show_offers(data){
      
   var cut_text = shorten(data[i].text.en,135) + "...";
      
- var offer = "<div class='card_row "+active_card+"' data-title='"+data[i].title+"'>\
+ var offer = "<div class='card_row "+active_card+"' data-title='"+data[i].title+"' data-check-visibility data-fade-2='true'>\
               <div class='card_pic'> <img src='"+data[i].pic+"'> </div>\
               <div class='card_details_col flex_center_col'>\
                <div class='center_col'>\
@@ -793,7 +794,7 @@ function show_team(data){
  for ( i = 0; i < data.length; i ++ ){
         
 
- var block = "<div class='team_member_row'> \
+ var block = "<div class='team_member_row' data-check-visibility data-fade-2='true'> \
               <div class='member_pic'> <img src='"+data[i].pic+"'> </div>\
               <div class='member_info_col'>\
                <div class='member_text _job_title'>"+data[i].role+"</div>\
@@ -1107,7 +1108,7 @@ function check_visibility(){
     
 
 // start check
-requestAnimationFrame(check_visibility);
+//requestAnimationFrame(check_visibility);
     
     
     
@@ -1123,7 +1124,53 @@ function cancel_check_visibility(){
     
     
     
+$( window ).on( "scroll", function(){
     
+    
+ var view_top = $( window ).scrollTop();
+ var view_bottom = view_top + $( window ).height();
+ 
+    
+ $( "[data-check-visibility]" ).each(function(){
+  
+    var el_top = $(this).offset().top;
+    var el_bottom = el_top + $( this ).outerHeight(true);
+     
+     
+     if ( el_top < view_bottom ){
+      
+       //console.log( "this is now in view" );
+         
+        if ( $(this).attr( "data-fade-2" ) == "true" ){
+         
+         $(this).addClass( "slide_up_fade_2" );
+                     
+            
+        } else {
+         
+       $( this ).addClass( "slide_up_fade_in" );
+         
+         
+        }
+            
+     } 
+     
+     
+     
+  });
+    
+    
+  if ( $( ".team_member_row" ).hasClass( "slide_up_fade_2" ) ){
+      
+   
+    $( ".team_member_row" ).removeClass( "slide_up_fade_2" );
+      
+  }
+    
+    
+    
+    
+}); // end of scroll
     
     
     
@@ -1143,7 +1190,6 @@ function cancel_check_visibility(){
     
     
 //store_pos();     
-
 get_page_content();
 
    

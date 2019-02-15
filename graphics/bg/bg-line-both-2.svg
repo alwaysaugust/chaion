@@ -1,0 +1,21 @@
+<svg width="1440" height="1291" xmlns="http://www.w3.org/2000/svg" id='bg_lines'>
+    
+    <g stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" opacity=".58">
+        
+        <path opacity=".2" d="M908.03 73.639L2256.845 59.83l-727.775 1211.278z" class='shape_1'/>
+        
+        <path opacity=".1" d="M986.294 1.246l1330.719 220.632-927.045 1066.493z" class='shape_2'/>
+        
+        <path opacity=".1" d="M840.339 144.358l454.391-36.454 890.173-71.414-641.512 1259.097z" class='shape_3'/>
+        
+        <g>
+         <path opacity=".2" d="M533.97 73.639L-814.845 59.83l727.775 1211.278z" class='shape_1'/>
+            
+         <path opacity=".1" d="M455.706 1.246L-875.013 221.878 52.032 1288.37z" class='shape_2'/>
+            
+         <path opacity=".1" d="M601.661 144.358L-742.903 36.49l641.512 1259.097z" class='shape_3'/>
+        </g>
+    
+    </g>
+
+</svg>

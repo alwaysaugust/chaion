@@ -73,7 +73,7 @@
 ._fb1 { padding-top: 30%; }
     
 
-.chaion_icon img { width: 120px; }
+.chaion_icon img { height: 100px; }
     
 ._main_intro { font-size: 16px;
                line-height: 25px;
@@ -83,8 +83,8 @@
                 }
     
     
-._main_intro img { top: 4px;
-                   height: 20px;
+._main_intro img { top: 6px;
+                   width: 60px;
                  }
     
     
@@ -92,7 +92,17 @@
 
 ._fb1:before { background-position: center 450px; }        
     
-._fb1:after { background-position: center 450px; }
+    
+    
+#bg_lines { top: 250px;
+            display: none;
+           }     
+    
+    
+
+._fb1:after { background-image: url('graphics/bg/bg-lines-both.svg');
+              background-position: center 350px;
+             }
     
     
     
@@ -595,6 +605,13 @@
 @media screen and (max-width: 900px) {
     
 
+ @media screen and ( max-width: 400px; ){
+     
+    .news_col { margin-top: 10%; }
+     
+ } /* end of media query */
+    
+    
 ._fb3 > .center_col  { width: 100%; }    
 
 

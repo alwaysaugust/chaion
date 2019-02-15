@@ -19,7 +19,7 @@
      "link": "https://forum.chaion.net/"
      },
     { 
-     "date": "Jan. 24, 2018",
+     "date": "Jan. 24, 2019",
      "title": "Say Hello to Aion Rust Kernel",
      "text": { "en": "Chaion proudly announces the achievement of secondary implementation completed in rust lang to the Aion community. Duel-kernels opens the door for diverse enhancement at the module level. Also it provides a larger surface area for non-core contributors to push improvements that make their way into other kernel implementations.", 
                "chinese": "Chaion工程团队向Aion社区提交了用rust语言构建的节点代码库。多版本的实现为版本间模块优化以及为非核心开发人员对Aion共识规范上提出建议乃至克制化提供可行性和多项选择。" 
