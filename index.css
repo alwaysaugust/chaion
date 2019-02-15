@@ -521,8 +521,10 @@ div { height: auto;
 
 
 #bg_lines { position: absolute;
-            left: 0px;
+            left: 50%;
             top: 350px;
+             width: 1440;
+             margin-left: -720px;
             }
 
 
@@ -767,9 +769,68 @@ div { height: auto;
                             left: 50%;
                             margin-left: -1px;
                             top: 0px;
-                            background-image: linear-gradient(90deg, #D8D8D8 100%, #D8D8D8 0%);                 
+                            /*background-image: linear-gradient(90deg, #D8D8D8 100%, #D8D8D8 0%);    */             
                             opacity: .35;
-                         }
+                            background-image: url('graphics/misc/thin-line.png');
+                            background-size: auto 100%;
+                            background-position: center top;
+                            background-repeat: no-repeat;
+                            }
+
+
+.timeline_col_wrap:after { content: "";
+                           height: 57px;
+                           width: 20px;
+                           position: absolute;
+                           top: 100%;
+                           left: 50%;
+                           margin-left: -10px;
+                           background-image: url('graphics/misc/line-glow.png');
+                           background-size: auto 100%;
+                           background-position: center 0px;
+                           background-repeat: no-repeat;
+                           -webkit-animation: glow_line_2 4s infinite;
+                           -webkit-animation-delay: 6s;
+                           -moz-animation: glow_line_2 4s infinite;
+                           -moz-animation-delay: 6s;
+                           }
+
+
+
+
+@-webkit-keyframes glow_line_2 {
+    
+    
+0%    { background-position: center 57px;
+        top: 100%;
+       }
+
+    
+100%  { background-position: center -57px;
+        top: -47px;
+        }
+    
+    
+    
+} /* end of keyframes */
+
+
+
+@-moz-keyframes glow_line_2 {
+    
+    
+0%    { background-position: center 57px;
+        top: 100%;
+       }
+
+    
+100%  { background-position: center -57px;
+        top: -47px;
+        }
+    
+    
+    
+} /* end of keyframes */
 
 
 
@@ -777,7 +838,8 @@ div { height: auto;
 .time_col { width: 40%;
             left: 50%;
             margin-bottom: -10%;
-          }
+            z-index: 1;
+            }
 
 
 .time_col:nth-of-type(odd) { padding-left: 10%; }
@@ -809,7 +871,7 @@ div { height: auto;
 .time_col:after { content: "";
                   height: 0px;
                   width: 60px;
-                  border-bottom: dashed 1.5px #24CCB8;
+                  border-bottom: dashed 2px #24CCB8;
                   position: absolute;
                   top: 23px;
                   opacity: .35; 

@@ -1160,12 +1160,8 @@ $( window ).on( "scroll", function(){
   });
     
     
-  if ( $( ".team_member_row" ).hasClass( "slide_up_fade_2" ) ){
-      
-   
-    $( ".team_member_row" ).removeClass( "slide_up_fade_2" );
-      
-  }
+    
+  
     
     
     

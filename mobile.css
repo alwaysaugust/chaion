@@ -225,6 +225,7 @@
                            }
 
 
+.timeline_col_wrap:after { left: 0px; }
 
 
 .time_col { width: auto;
@@ -254,6 +255,7 @@
 .time_col:nth-of-type(odd):before { left: -6px; }
 
 .time_col:nth-of-type(even):before { left: -6px; }
+    
 
 
 
