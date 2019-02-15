@@ -101,7 +101,7 @@ function store_pos() {
 function check_scroll_pos(){
     
     
- var curr_pos = $( window ).scrollTop();
+ var curr_pos = $( window ).scrollTop() + 6;
     
  $( "[data-link-from]" ).each(function(i){
      
