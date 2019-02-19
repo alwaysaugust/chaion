@@ -134,7 +134,7 @@ function check_scroll_pos(){
     
     
 // show languages dropdown 
-$( "body" ).on( "click", "._lang", lang_dropdown );
+$( "body" ).on( "click", "._lang_dropdown", lang_dropdown );
     
     
     
@@ -142,8 +142,10 @@ function lang_dropdown(){
     
     
  var right_pos = $( "._lang" ).offset().left - $( "._lang" ).width();
- var top_pos = $( ".header" ).outerHeight(true);
+ var top_pos =  $( ".header" ).outerHeight(true);
     
+  
+     
  var dropdown = "<div class='lang_dropdown'>\
                  <div class='lang_col' data-lang='en'> English </div>\
                  <div class='lang_col' data-lang='chinese'>  中文版 </div>\
@@ -195,9 +197,29 @@ $( "body" ).on( "click", ".lang_col", function(){
   
    $( this ).addClass( "_on_lang" ).siblings().removeClass( "_on_lang" );
    
-   $( "._lang" ).attr( "data-lang", $( "._on_lang" ).attr( "data-lang" ) );
+   $( "._lang" ).attr( "data-lang", lang );
      
-   var lang_text = (function(){
+  
+   toggle_lang(lang)
+      
+         
+ } // end of else 
+    
+    
+    
+});
+    
+    
+    
+    
+    
+// toggle language 
+function toggle_lang(x){
+    
+    
+ var lang = x;
+    
+ var lang_text = (function(){
        
      if ( lang == "en" ){
       
@@ -212,9 +234,11 @@ $( "body" ).on( "click", ".lang_col", function(){
    }) ();
      
    $( "._lang span" ).text( lang_text );
-     
-     
-     $( "div[data-alt-lang]" ).each( function(){
+    
+    
+    
+    
+    $( "div[data-alt-lang]" ).each( function(){
          
         var chang_lang = $( this ).attr( "data-"+lang );
          
@@ -236,18 +260,34 @@ $( "body" ).on( "click", ".lang_col", function(){
          
          
      }); // end of each
-     
-     
-     
-     
- } // end of else 
     
     
+    
+    
+} // end of toggle_lang
+    
+    
+    
+// to toggle language on mobile
+$( "body" ).on("click", "._toggle_lang", function(){
+
+ if ( $(this).attr( "data-lang" ) === "en" ){
+  
+    $(this).attr( "data-lang", "chinese" );
+     
+ } else {
+  
+   $(this).attr( "data-lang", "en" );
+     
+ }
+ var lang = $(this).attr( "data-lang" );
+    
+ $( "body" ).attr( "data-lang", lang );
+    
+ toggle_lang( lang ); 
+ 
     
 });
-    
-    
-    
     
     
     
@@ -290,8 +330,15 @@ $( "body" ).on( "mouseleave touchend", ".lang_dropdown", function(){
 // to see roadmap details
 $( "body" ).on( "click", "._view_details", function(){
     
+ var par = $(this).parent();
  var icon = $( this ).parent().find( ".col_icon img" ).attr( "src" );
- var text = $( this ).parent().attr( "data-text" );
+ var text = (function(){
+     
+   var lang = $( "._lang" ).attr( "data-lang" );
+     
+    return $( par ).attr( "data-" + lang );
+     
+ }) ();
  var link = $( this ).parent().attr( "data-link" );
     
  modal(icon,text,link);
@@ -543,11 +590,25 @@ function modal(x,y,z){
   }else {
       
    // return roadmap modal
+  var button_text = (function(){
+      
+    if ( $("._lang" ).attr( "data-lang" ) === "en" ){
+     
+     return "Learn more";    
+        
+    } else {
+     
+     return "学到更多";
+        
+    }
+      
+  }) ();
+      
   return "<div class='modal'> \
            <div class='center_col flex_center_col'> \
             <div class='modal_icon'> <img src='"+x+"'> </div>\
             <div class='modal_text'>"+y+" </div>\
-            <div class='card_button _modal_button'> Learn more <img src='graphics/misc/right-arrow-white.svg'> <a href='"+z+"' class='fixed_link' target='_blank'></a> </div>\
+            <div class='card_button _modal_button'> "+button_text+" <img src='graphics/misc/right-arrow-white.svg'> <a href='"+z+"' class='fixed_link' target='_blank'></a> </div>\
            </div> <!-- end of center_col -->\
            <div class='close_button _close_modal'></div>\
           </div> <!-- end of popup_modal -->";
@@ -681,12 +742,12 @@ function show_offers(data){
      
   var cut_text = shorten(data[i].text.en,135) + "...";
      
- var offer = "<div class='card_row "+active_card+"' data-title='"+data[i].title+"' data-check-visibility data-fade-2='true'>\
+ var offer = "<div class='card_row "+active_card+"' data-title='"+data[i].title.en+"' data-check-visibility data-fade-2='true'>\
               <div class='card_pic'> <img src='"+data[i].pic+"'> </div>\
               <div class='card_details_col flex_center_col'>\
                <div class='center_col'>\
                 <div class='card_text' data-chinese='"+data[i].text.chinese+"' data-en='"+data[i].text.en+"' data-trim-text='135' data-alt-lang>"+cut_text+"</div>\
-                <div class='card_button'> Learn more <img src='graphics/icons/what-we-offer/right-arrow.svg'> </div>\
+                <div class='card_button flex_row_inline'> <div data-alt-lang data-en='Learn more' data-chinese='学到更多'>Learn more</div> <img src='graphics/icons/what-we-offer/right-arrow.svg'> </div>\
                </div> <!-- end of center_col -->\
               </div> <!-- end of card_details -->\
              </div> <!-- end of card_row -->";
@@ -707,6 +768,9 @@ function show_offers(data){
     
     
     
+    
+    
+    
 // get roadmap
 function show_roadmap(data){
     
@@ -714,12 +778,12 @@ function show_roadmap(data){
   for ( i = 0; i < data.length; i ++ ){
         
 
- var block = "<div class='time_col' data-text='"+data[i].info.en+"' data-link='"+data[i].link+"' data-chinese='"+data[i].info.chinese+"' data-en='"+data[i].info.en+"'>\
+ var block = "<div class='time_col' data-link='"+data[i].link+"' data-chinese='"+data[i].info.chinese+"' data-en='"+data[i].info.en+"'>\
               <div class='col_icon'> <img src='"+data[i].icon+"'> </div>\
-       <div class='col_text _title'>"+data[i].projection+" </div>\
-       <div class='col_text _thin'>"+data[i].tech+" </div>\
-       <div class='col_text _thin'>"+data[i].release+" </div>\
-       <button class='timeline_button _bg_gradient_2 _view_details'> View Details </button>\
+       <div class='col_text _title' data-alt-lang data-en='"+data[i].projection.en+"' data-chinese='"+data[i].projection.chinese+"'>"+data[i].projection.en+" </div>\
+       <div class='col_text _thin' data-alt-lang data-en='"+data[i].tech.en+"' data-chinese='"+data[i].tech.chinese+"'>"+data[i].tech.en+" </div>\
+       <div class='col_text _thin' data-alt-lang data-en='"+data[i].release.en+"' data-chinese='"+data[i].release.chinese+"'>"+data[i].release.en+" </div>\
+       <button class='timeline_button _bg_gradient_2 _view_details'> <div data-alt-lang data-en='View Details' data-chinese='查看详情'>View Details</div> </button>\
       </div> <!-- end of time_col -->";
     
   
@@ -754,10 +818,10 @@ function show_news(data){
 
  var block = "<div class='news_row flex_center_col'>\
       <div class='center_col'>\
-       <div class='date_text'>"+data[i].date+"</div>\
-       <div class='article_title'>"+data[i].title+"</div>\
+       <div class='date_text' data-alt-lang data-en='"+data[i].date.en+"' data-chinese='"+data[i].date.chinese+"'>"+data[i].date.en+"</div>\
+       <div class='article_title' data-alt-lang data-en='"+data[i].title.en+"' data-chinese='"+data[i].title.chinese+"'>"+data[i].title.en+"</div>\
        <div class='article_text' data-chinese='"+data[i].text.chinese+"' data-en='"+data[i].text.en+"' data-trim-text='120' data-alt-lang>"+cut_text+"</div>\
-       <div class='card_button'> Read more <img src='graphics/misc/right-arrow-white.svg'> <a href='"+data[i].link+"' class='fixed_link' target='_blank'></a> </div>\
+       <div class='card_button'> <div data-alt-lang data-en='Read more' data-chinese='阅读更多'>Read more</div> <img src='graphics/misc/right-arrow-white.svg'> <a href='"+data[i].link+"' class='fixed_link' target='_blank'></a> </div>\
       </div> <!-- end of center_col -->\
      </div> <!-- end of news_row -->";
     
@@ -993,13 +1057,16 @@ $( "body" ).on( "click", "._open_menu", mobile_menu );
 function mobile_menu(){
     
  var menu = "<div class='mobile_menu flex_center_col'>\
-             <div class='menu_link'> Home </div>\
-             <div class='menu_link'> About Chaion </div>\
-             <div class='menu_link'> Products </div>\
-             <div class='menu_link'> Partners </div>\
-             <div class='menu_link'> Our Team </div>\
-             <div class='menu_link'> News </div>\
-             <div class='header_button _contact_us flex_center_row'> Contact Us </div>\
+             <div class='menu_link' data-alt-lang data-en='Home' data-chinese='首页' data-link-to='home'> Home </div>\
+             <div class='menu_link' data-link-to='about' data-alt-lang data-en='About Chaion' data-chinese='关于我们'> About Chaion </div>\
+             <div class='menu_link' data-alt-lang data-en='Products' data-chinese='产品' data-link-to='products'> Products </div>\
+             <div class='menu_link' data-alt-lang data-en='Partners' data-chinese='合作伙伴' data-link-to='partners'> Partners </div>\
+             <div class='menu_link' data-alt-lang data-en='our team' data-chinese='团队成员'  data-link-to='team'> Our Team </div>\
+             <div class='menu_link' data-alt-lang data-en='News' data-chinese='新闻' data-link-to='news'> News </div>\
+             <div class='header_button_wrap flex_row_inline'>\
+             <div class='header_button _contact_us flex_center_row'  data-alt-lang data-en='Contact Us' data-chinese='联系我们'> Contact Us </div>\
+             <div class='header_button _lang _toggle_lang flex_center_row'> <div data-alt-lang data-chinese='中文版' data-en='English'>English</div> <img src='graphics/misc/down-triangle.svg'> </div>\
+             </div> <!-- end of header_button_wrap --> \
             </div>";
     
     
@@ -1010,6 +1077,18 @@ function mobile_menu(){
     
  $( ".mobile_menu" ).css("top", $( ".header" ).outerHeight(true) );
     
+ var lang = $( "body" ).attr( "data-lang" );
+    
+
+  $( ".mobile_menu div[data-alt-lang]" ).each( function(){
+     
+    var l = $(this).attr( "data-"+lang );
+      
+     $(this).text(l);
+      
+  });
+     
+ 
     
     
     
@@ -1059,69 +1138,14 @@ $( "body" ).on( "click", ".menu_link", function(){
     
     
     
-    
-// -- @@ Animations --
-// ---------------------------------
-    
-    
-var visibileID;
-    
-function check_visibility(){
-    
-    
- $( "[data-check-visibility]" ).each(function(){
-  
-    var el_top = $(this).offset().top;
-    var el_bottom = el_top + $( this ).outerHeight(true);
-     
-    var view_top = $( window ).scrollTop();
-    var view_bottom = view_top + $( window ).height();
-     
-     
-     if ( el_top < view_bottom ){
-      
-       //console.log( "this is now in view" );
-         
-       $( this ).addClass( "slide_up_fade_in" );
-         
-       cancel_check_visibility();
-         
-     } else {
-         
-         
-      visibileID = requestAnimationFrame(check_visibility);
-         
-     }
-     
-     
-     
-  });
-    
-    
+ 
+ 
     
 
     
     
-} // end of check_visibilty()
-    
-    
     
 
-// start check
-//requestAnimationFrame(check_visibility);
-    
-    
-    
-// stop check: 
-// .. once all elements have been animated in
-function cancel_check_visibility(){
-    
- cancelAnimationFrame(visibileID);
-    
-    
-} // end of cancel_check_visibility
-
-    
     
     
 $( window ).on( "scroll", function(){

@@ -26,7 +26,7 @@
  <script type="text/javascript" src="js/jq-ui.js"> </script>
  <script type="text/javascript" src="index.js"> </script>
 </head>
-<body>
+<body data-lang='en'>
 
     
     
@@ -35,16 +35,16 @@
  <div class='center_col flex_row_inline _flex_space_between'>
   <div class='header_logo'> <img src='graphics/logo/chain-logo-full-white.svg'> </div>
   <div class='header_links_row flex_row_inline'>
-   <div class='header_link _on_header_link' data-link-to='home'> <div>Home</div> </div>
-   <div class='header_link' data-link-to='about'> <div>About Chaion</div> </div>
-   <div class='header_link' data-link-to='products'> <div>Products</div> </div>
-   <div class='header_link' data-link-to='partners'> <div>Partners</div> </div>
-   <div class='header_link' data-link-to='team'> <div>our team</div> </div>
-   <div class='header_link' data-link-to='news'> <div>News</div> </div>
+   <div class='header_link _on_header_link' data-link-to='home'> <div data-alt-lang data-en='home' data-chinese='首页'>Home</div> </div>
+   <div class='header_link' data-link-to='about'> <div data-alt-lang data-en='About Chaion' data-chinese='关于我们'>About Chaion</div> </div>
+   <div class='header_link' data-link-to='products'> <div data-alt-lang data-en='Products' data-chinese='产品'>Products</div> </div>
+   <div class='header_link' data-link-to='partners'> <div data-alt-lang data-en='Partners' data-chinese='合作伙伴'>Partners</div> </div>
+   <div class='header_link' data-link-to='team'> <div data-alt-lang data-en='our team' data-chinese='团队成员'>our team</div> </div>
+   <div class='header_link' data-link-to='news'> <div data-alt-lang data-en='News' data-chinese='新闻'>News</div> </div>
   </div> <!-- end of header_links_row -->
   <div class='header_buttons_row flex_row_inline'>
-   <div class='header_button _contact_us flex_center_row'> Contact Us </div>
-   <div class='header_button _lang flex_center_row' data-lang='en'> <span>English</span> <img src='graphics/misc/down-triangle.svg'> </div>
+   <div class='header_button _contact_us flex_center_row' data-alt-lang data-en='Contact Us' data-chinese='联系我们'> Contact Us </div>
+   <div class='header_button _lang _lang_dropdown flex_center_row' data-lang='en'> <span>English</span> <img src='graphics/misc/down-triangle.svg'> </div>
   </div> <!-- end of header_buttons_row -->
   <div class='menu_button _open_menu'> <img src='graphics/misc/menu-icon.svg'> </div> 
  </div> <!-- end of center_col -->
@@ -58,7 +58,7 @@
     
     
  <div class='frame_block _fb1 _bg_gradient' data-link-from='home'>
-  <svg width="1440" height="1291" xml:space="preserve" id='bg_lines'>
+  <svg width height="1291" xml:space="preserve" id='bg_lines'>
     
     <g stroke="#FFF" stroke-width="3" fill="none" fill-rule="evenodd" opacity="">
         <path opacity=".2" d="M908.03 73.639L2256.845 59.83l-727.775 1211.278z" class='shape_1'/>
@@ -93,12 +93,15 @@
    </div> <!-- end of block_col -->
       
       
+      
+      
+      
    <div class='block_col _bc_3 flex_center_col'>
     <div class='center_col'>
      <div class='col_text _small'> Roadmap to the internet, decentralized </div>
      <div class='col_text _small'> 路线图 </div>
      <div class='toogle_road_map _hide_map'> <div></div> <img src='graphics/misc/down-arrow.svg'> </div>
-     <div class='timeline_col_wrap _shell'>  
+     <div class='timeline_col_wrap _shell'>
       
      </div> <!-- end of timeline_col_wrap -->
     </div> <!-- end of center_col -->
@@ -115,9 +118,9 @@
    <div class='col_text _small'> What We Offer </div>
    <div class='col_text _small'> 产品服务 </div>
    <div class='tabs_wrap flex_center_row _flex_space_between'>
-    <div class='tab flex_center_row'> <img src='graphics/icons/what-we-offer/icon-4.svg'><span>Consulting</span> </div>
-    <div class='tab flex_center_row _on_tab'> <img src='graphics/icons/what-we-offer/icon-2.svg'> <span>Core Development</span> </div>
-    <div class='tab flex_center_row'> <img src='graphics/icons/what-we-offer/icon-1.svg'> <span>Build dApps</span> </div>
+    <div class='tab flex_center_row'> <img src='graphics/icons/what-we-offer/icon-4.svg'><div data-alt-lang data-en='Consulting' data-chinese='顾问'>Consulting</div> </div>
+    <div class='tab flex_center_row _on_tab'> <img src='graphics/icons/what-we-offer/icon-2.svg'> <div data-alt-lang data-en='Core Development' data-chinese='核心开发'>Core Development</div> </div>
+    <div class='tab flex_center_row'> <img src='graphics/icons/what-we-offer/icon-1.svg'> <div data-alt-lang data-en='Build dApps' data-chinese='dApps应用'>Build dApps</div> </div>
    </div> <!-- end of tabs_wrap -->  
    <div class='tab_content_col'>
     <div class='col_cards_wrap'>
