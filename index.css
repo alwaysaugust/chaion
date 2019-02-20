@@ -735,10 +735,14 @@ div { height: auto;
                   }
 
 
-.toogle_road_map div:before { content: "Hide"; }
+body[data-lang='en'] .toogle_road_map div:before { content: "Hide"; }
+
+body[data-lang='chinese'] .toogle_road_map div:before { content: "隐藏"; }
 
 
-._show_map div:before { content: "Show"; }
+body[data-lang='en'] ._show_map div:before { content: "Show"; }
+
+body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
 
 
 ._extra_padd_bottom  { padding-bottom: 130px; }
@@ -1114,7 +1118,7 @@ div { height: auto;
                    width: auto;
                    position: relative;
                    margin-left: 10px;
-                   top: 3px;
+                   top: 1px;
                   }
 
 

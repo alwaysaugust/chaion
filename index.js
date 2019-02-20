@@ -219,6 +219,9 @@ function toggle_lang(x){
     
  var lang = x;
     
+    
+ $( "body" ).attr( "data-lang", lang );
+    
  var lang_text = (function(){
        
      if ( lang == "en" ){
@@ -246,14 +249,14 @@ function toggle_lang(x){
           
            var text = shorten( chang_lang, Number($(this).attr( "data-trim-text" ) ) );
              
-           $( this ).text( text );
+           $( this ).html( text );
                           
            return;
              
              
          } else {
           
-          $( this ).text( chang_lang );
+          $( this ).html( chang_lang );
              
              
          }
@@ -282,7 +285,6 @@ $( "body" ).on("click", "._toggle_lang", function(){
  }
  var lang = $(this).attr( "data-lang" );
     
- $( "body" ).attr( "data-lang", lang );
     
  toggle_lang( lang ); 
  
@@ -598,7 +600,7 @@ function modal(x,y,z){
         
     } else {
      
-     return "学到更多";
+     return "了解更多";
         
     }
       
