@@ -20,18 +20,23 @@ $( "body" ).on( "click", ".header_link", function(){
     
     
  var link = $(this).attr( "data-link-to" );
+ var index = $(this).index();
     
  var pos = (function(){
      
-  var n = $( "[data-link-from='"+link+"']" ).offset().top;
+ var n = $( "[data-link-from='"+link+"']" ).offset().top;
      
   if ( link == "team" || link == "news" ){
    
   return n - ( $(".header").outerHeight(true) + 50 );
+    
+  //return  section_positions[index] - ( $(".header").outerHeight(true) + 50 );
       
   } else {
    
    return n - $(".header").outerHeight(true);
+     
+   //return  section_positions[index] - $(".header").outerHeight(true);
       
   }
      
@@ -55,6 +60,8 @@ var section_positions = [];
     
 function store_pos() {
     
+ section_positions.length = 0;
+    
 
  $( "[data-link-from]" ).each(function(){
      
@@ -63,7 +70,7 @@ function store_pos() {
      
   var pos = (function(){
      
-  var n = $( t ).offset().top;
+  var n = Math.floor( $( t ).offset().top );
      
   if ( link == "team" || link == "news" ){
    
@@ -82,6 +89,7 @@ function store_pos() {
      
  }); // end of each linkable section
     
+ 
     
     
 } // end of store_pos function
@@ -101,11 +109,12 @@ function store_pos() {
 function check_scroll_pos(){
     
     
- var curr_pos = $( window ).scrollTop() + 6;
+ var curr_pos = $( window ).scrollTop();
     
  $( "[data-link-from]" ).each(function(i){
      
   var pos = section_positions[i];
+  //var pos = $(this).offset().top - $(".header").outerHeight(true);
   var header_link = $(this).attr( "data-link-from" );
      
   if ( curr_pos >= pos ){
@@ -265,6 +274,8 @@ function toggle_lang(x){
      }); // end of each
     
     
+   store_pos();
+    
     
     
 } // end of toggle_lang
@@ -358,22 +369,32 @@ $( "body" ).on("click", ".toogle_road_map", function(){
  if ( $(this).hasClass( "_hide_map" )){
   
    $(this).removeClass( "_hide_map" ).addClass( "_show_map" );
-   $( ".timeline_col_wrap" ).slideUp();
+   $( ".timeline_col_wrap" ).slideUp( function(){
+
+     store_pos();
+       
+   });
+    
+    $( "._fb1 ._bc_3" ).addClass( "_extra_padd_bottom" );
      
-  $( "._fb1 ._bc_3" ).addClass( "_extra_padd_bottom" );
      
     return;
      
  } if ( $(this).hasClass( "_show_map" )){
      
   $(this).removeClass( "_show_map" ).addClass( "_hide_map" );
-  $( ".timeline_col_wrap" ).slideDown();
-     
-  $( "._fb1 ._bc_3" ).removeClass( "_extra_padd_bottom" );
+  $( ".timeline_col_wrap" ).slideDown( function(){ 
+   store_pos();
+  });
     
+   $( "._fb1 ._bc_3" ).removeClass( "_extra_padd_bottom" );
+    
+    
+   return;
      
  }
     
+
  
     
 });
@@ -1165,7 +1186,6 @@ $( window ).on( "scroll", function(){
      
      if ( el_top < view_bottom ){
       
-       //console.log( "this is now in view" );
          
         if ( $(this).attr( "data-fade-2" ) == "true" ){
          
@@ -1178,13 +1198,13 @@ $( window ).on( "scroll", function(){
          
          
         }
+         
             
-     } 
+     } // end of if in view 
      
      
      
   });
-    
     
     
   

@@ -745,7 +745,7 @@ body[data-lang='en'] ._show_map div:before { content: "Show"; }
 body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
 
 
-._extra_padd_bottom  { padding-bottom: 130px; }
+._extra_padd_bottom  { padding-bottom: 22%; }
 
 
 .toogle_road_map img { height: auto;
@@ -1070,10 +1070,14 @@ body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
 
 
 ._on_card { -webkit-transform: scale(1.2,1.2); 
+            -moz-transform: scale(1.2,1.2); 
+            transform: scale(1.2,1.2); 
             z-index: 1;
             margin-left: -150px;
             margin-right: -150px;
             -webkit-box-shadow: 0px 0px 25px rgba(13,35,66,.1);
+            -moz-box-shadow: 0px 0px 25px rgba(13,35,66,.1);
+            box-shadow: 0px 0px 25px rgba(13,35,66,.1);
            }
 
 
