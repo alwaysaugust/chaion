@@ -571,18 +571,39 @@ function modal(x,y,z){
       
   } if( x == "contact" ){
       
+  
+    var text = (function(){
+        
+      if ( $( "body" ).attr( "data-lang") == "en" ){
+       
+        var copy = ["Have a question? Drop us a line", "Enter name", "Enter email", "Your message" ];
+          
+        return copy;
+          
+      } else {
+       
+       var copy = ["有问题？联系我们", "姓名", "邮件", "请留言" ];
+          
+       return copy;
+          
+      }
+        
+        
+    }) ();
+      
+      
    // contact form
    return "<div class='modal _contact_modal'>\
             <div class='center_col flex_center_col'>\
-              <div class='modal_title'>Have a question? Drop us a line </div>\
+              <div class='modal_title'>"+text[0]+" </div>\
               <div class='input_wrap'>\
-               <input type='text' name='name' id='user_name' class='_input_field' placeholder='Enter name'>\
+               <input type='text' name='name' id='user_name' class='_input_field' placeholder='"+text[1]+"'>\
               </div> <!-- end of input_wrap -->\
                <div class='input_wrap'>\
-               <input type='email' name='email' id='user_email' class='_input_field' placeholder='Enter email'> \
+               <input type='email' name='email' id='user_email' class='_input_field' placeholder='"+text[2]+"'> \
               </div> <!-- end of input_wrap -->\
                <div class='input_wrap _msg_box'>\
-               <textarea name='message' id='msg' class='_input_field' placeholder='Your message'></textarea>\
+               <textarea name='message' id='msg' class='_input_field' placeholder='"+text[3]+"'></textarea>\
               </div> <!-- end of input_wrap -->\
               <div class='modal_button _submit_form _bg_gradient_2'>  </div>\
              </div> <!-- end of center_col -->\
@@ -604,12 +625,27 @@ function modal(x,y,z){
             </div> <!-- end of modal -->";
       
   } if ( x == "complete" ){
+      
+      
+     var text = (function(){
+         
+      if ( $( "body" ).attr( "data-lang" ) == "en" ){
+       
+       return "Email successfully sent!";
+          
+      } else {
+       
+       return "已成功发送到您的邮箱";
+          
+      }
+         
+     }) ();
    
      // form sent 
      return "<div class='modal _contact_modal _padding'>\
             <div class='center_col flex_center_col'>\
               <div class='modal_icon _round _bg_gradient_2 flex_center_col'><img src='graphics/misc/check-white.svg'></div>\
-              <div class='modal_title'>Email successfully sent!</div>\
+              <div class='modal_title'>"+text+"</div>\
              </div> <!-- end of center_col -->\
             <div class='close_button _close_modal'></div>\
             </div> <!-- end of modal -->";
@@ -947,7 +983,7 @@ function submit_form(){
     
   var check_inputs = (function(){
       
-     if ( name.length > 0 && email.length > 2 & msg.length > 0 && msg != "Your message" ) { 
+     if ( name.length > 0 && email.length > 2 & msg.length > 0 ) { 
          
      return true;
      }
@@ -970,7 +1006,7 @@ function submit_form(){
       
    $( "._input_field" ).each( function(){
        
-     if ( $(this).val() <= 0 || $.trim( $(this).val() ) == "Your message" ){
+     if ( $(this).val() <= 0 ){
       
       $( this ).parent().addClass( "_error" );
          
@@ -995,25 +1031,7 @@ function submit_form(){
     
     
     
-// focus msg input
-$( "body" ).on( "focus", "#msg", function(){
-    
- if ( $.trim( $(this).val() ) == "Your message" ){
-  
-   $(this).val( " " );
-     
- }
-    
-}).on( "blur", "#msg", function(){
-   
- if ( $.trim( $(this).val() ).length <= 0 ){
-  
-  $(this).val( "Your message" );
-     
- }
-    
-    
-});
+
     
     
     
@@ -1043,8 +1061,28 @@ function send_form(name,email,msg){
     modal("complete");
       
   } else {
+      
+      
+    var text =(function(){
+        
+     if ( $( "body" ).attr( "data-lang" ) == "en" ){
+      
+       var copy = ["Invalid email", "Please enter a valid email address and try again." ];
+         
+      return copy;
+         
+     } else {
+         
+      var copy = ["无效电子邮件", "请输入有效的电子邮件地址，然后重试。" ];
+      
+      return copy;
+         
+     }
+        
+    }) ();
+      
    
-    modal(1,"Invalid email","Please enter a valid email address and try again.");
+    modal(1,text[0],text[1]);
       
   }
      
@@ -1054,7 +1092,26 @@ function send_form(name,email,msg){
  }).fail( function() {
       
    // failed to reach server 
-   modal( 1,"Network Error","Please make sure you are connected to the internet and try again.");
+   var text =(function(){
+        
+     if ( $( "body" ).attr( "data-lang" ) == "en" ){
+      
+       var copy = ["Network Error", "Please make sure you are connected to the internet and try again." ];
+         
+      return copy;
+         
+     } else {
+         
+      var copy = ["网络错误", "请确认您已成功连接到网络，然后重试。" ];
+      
+      return copy;
+         
+     }
+        
+    }) ();
+     
+     
+   modal( 1,text[0],text[1]);
       
   }); // end of fail     
     

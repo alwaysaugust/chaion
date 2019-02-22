@@ -1686,6 +1686,7 @@ body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
 
 .modal_button:before { content: "Submit"; }
 
+body[data-lang='chinese'] .modal_button:before { content: "提交"; }
 
 
 .modal_button._sending { background: none; 
@@ -1697,7 +1698,7 @@ body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
 .modal_button._sending:before { content: "Sending..."; }
 
 
-
+body[data-lang='chinese'] .modal_button._sending:before { content: "正在发送"; }
 
 
 
