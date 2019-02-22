@@ -973,7 +973,8 @@ body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
              max-width: 782px;
              margin-top: 25px;
              border-bottom: solid 1px lightgrey;
-             }
+             height: 55px;
+            }
 
 
 .tab { width: 30%;      

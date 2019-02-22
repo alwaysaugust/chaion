@@ -328,7 +328,8 @@
              white-space: nowrap;
              display: block;
              max-width: 100%;
-            }
+             height: auto;
+             }
 
 
 .tab { width: 100%;      
