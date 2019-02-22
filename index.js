@@ -30,13 +30,11 @@ $( "body" ).on( "click", ".header_link", function(){
    
   return n - ( $(".header").outerHeight(true) + 50 );
     
-  //return  section_positions[index] - ( $(".header").outerHeight(true) + 50 );
       
   } else {
    
    return n - $(".header").outerHeight(true);
      
-   //return  section_positions[index] - $(".header").outerHeight(true);
       
   }
      
@@ -102,7 +100,7 @@ function store_pos() {
     
   
     
-// - @ Window Scroll : highlight header link when in section
+// - @ highlight header link when in section
 // ------------------------
      
 // check scroll pos
@@ -191,7 +189,7 @@ function lang_dropdown(){
     
     
     
-// to toggle languages
+// to toggle languages:desktop
 $( "body" ).on( "click", ".lang_col", function(){
    
  var lang = $( this ).attr( "data-lang" );
@@ -282,6 +280,10 @@ function toggle_lang(x){
     
     
     
+    
+    
+    
+    
 // to toggle language on mobile
 $( "body" ).on("click", "._toggle_lang", function(){
 
@@ -318,6 +320,8 @@ $( "body" ).on( "mouseleave touchend", ".lang_dropdown", function(){
     
     
     
+    
+
     
     
     
