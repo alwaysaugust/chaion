@@ -794,11 +794,33 @@
 
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
 
-.fixed_banner { display: none; }
 
-._banner_space { top: 0px; }
+._banner_space { top: 50px; }
+
+.fixed_banner { height: 50px; }
+
+.left_banner_block img { display: none; }
+
+.left_banner_block { font-size: 10px;
+                     padding-right: 25px;
+                     }
+
+.left_banner_block div { margin-left: 0px; }
+
+.fixed_banner:before { content: "";
+                       height: 100%;
+                       width: 40%;
+                       background-position: left top;
+                       }
+
+.banner_button { font-size: 10px;
+                 height: 26px;
+                 width: 106px;
+                 margin-right: 25px;
+                }
+
 
 
 } /* end of media query */

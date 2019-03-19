@@ -17,13 +17,11 @@ $( document ).ready(function(){
 // show banner
 setTimeout(function(){
 
-if ( $(window).width() > 960 ){
+
   $( ".header, .frame" ).addClass( "_banner_space" );
   $( ".fixed_banner" ).show();
 
   store_pos();
-
-}
 
 }, 4500);
 
@@ -189,7 +187,7 @@ function lang_dropdown(){
 
   if ( $(".fixed_banner").length > 0 ){
 
-   return $( ".header" ).outerHeight(true) + 80
+   return $( ".header" ).outerHeight(true) + $( ".fixed_banner" ).height();
 
  } else {
 
