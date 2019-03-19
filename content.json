@@ -1,7 +1,7 @@
 
-{ "news": [ 
+{ "news": [
 
-    { 
+    {
      "date": { "en": "Jan. 14, 2019",
                "chinese": "2019年1月14日"
              },
@@ -13,7 +13,7 @@
       },
      "link": "https://aion.network/"
      },
-    { 
+    {
      "date": { "en": "Feb. 18, 2018",
                "chinese": "2018年5月18日"
              },
@@ -22,19 +22,19 @@
               },
      "text": { "en": "Chaion is founded at May 2018. Our objective is to work on adoption blockchain technology to every field of work and support diverse Aion ecosystem oriented projects. ",
                "chinese": "埃诺鞍（上海）信息科技有限公司(Chaion (Shanghai) Information Technology Co.,Ltd.)成立于2018年5月。作为Aion生态圈重要的工程力量，我们旨在帮助区块链技术在各行业中的整合，同时支持Aion生态系统相关项目开发和部署。"
-              
+
              },
      "link": "https://forum.chaion.net/"
      },
-    { 
+    {
      "date": { "en": "Jan. 24, 2019",
                "chinese": "2019年1月24日"
              },
      "title": { "en": "Say Hello to Aion Rust Kernel",
                 "chinese": "你好，Aion Rust Kernel"
               },
-     "text": { "en": "Chaion proudly announces the achievement of secondary implementation completed in rust lang to the Aion community. Duel-kernels opens the door for diverse enhancement at the module level. Also it provides a larger surface area for non-core contributors to push improvements that make their way into other kernel implementations.", 
-               "chinese": "Chaion团队向Aion社区提交了用rust语言构建的节点代码库。多版本的实现为版本间模块优化以及为非核心开发人员对Aion共识提出建议及可提供可行性的多项选择。" 
+     "text": { "en": "Chaion proudly announces the achievement of secondary implementation completed in rust lang to the Aion community. Duel-kernels opens the door for diverse enhancement at the module level. Also it provides a larger surface area for non-core contributors to push improvements that make their way into other kernel implementations.",
+               "chinese": "Chaion团队向Aion社区提交了用rust语言构建的节点代码库。多版本的实现为版本间模块优化以及为非核心开发人员对Aion共识提出建议及可提供可行性的多项选择。"
        },
      "link": "https://blog.aion.network/announcing-the-aion-kernel-in-rust-fbdd7971c632"
      }
@@ -42,19 +42,19 @@
 
 
 
-  ] , 
- 
- 
-  
- 
- 
- 
- 
- 
+  ] ,
 
- 
+
+
+
+
+
+
+
+
+
  "offer": [
-     
+
      {
       "title": { "en": "Consulting",
                  "chinese": "顾问"
@@ -63,7 +63,7 @@
                 "chinese": "CHAION帮助您的企业在Aion区块链上构建分布式的应用程序并提供行业咨询。我们致力于通过提供专业性的技术服务与工具来扩大Aion强大的与可互操作性的生态系统。"
               },
        "pic": "pics/pic-3.jpg"
-    
+
      },
      { "title": { "en": "Core Development",
                   "chinese": "核心开发"
@@ -82,19 +82,19 @@
               },
       "pic": "pics/pic-1.jpg"
      }
-     
-     
-     
- ], 
- 
 
- 
- 
- 
- 
- 
- 
- 
+
+
+ ],
+
+
+
+
+
+
+
+
+
  "roadmap": [{ "projection": { "en": "May 2018 ~ January 2019",
                                "chinese": "2018年5月-2019年1月"
                              },
@@ -116,32 +116,38 @@
                "tech": { "en": "Aion Wallet App (Demo version)",
                          "chinese": "Aion钱包App（试用版）"
                        },
-               "release": { "en": "Release Date: March 2019 ",
+               "release": { "en": "Released Mar 31, 2019 ",
                             "chinese": "发布日期：2019年3月"
                           },
-               "icon": "graphics/icons/roadmap/icon-2.svg",
-               "info": { "en": "More details coming soon.",
-                        "chinese": "更多详情即将公布！"
+               "icon": "graphics/icons/roadmap/icon-3.svg",
+               "info": { "title": { "en": "Aion Wallet App", "chinese": "Aion钱包App" },
+                         "date": { "en": "Released Mar 31, 2019", "chinese": "发布日期：2019年3月" },
+                         "text": { "en": "Makkii is a secure, convenient, and trusted Crypto asset management tool. In the future, we would gradually improve user experiences andprovide more product diversity, and create a future Crypto currency in thedaily life of the business sence.",
+                                   "chinese": "Makkii是一款安全、便捷、可信任的数字资产管理工具。未来将逐步提高用户对产品的体验与差异化功能的使用，实现未来数字货币在日常生活中的商业用途。"
+                         }
                        },
-               "link": "https://github.com/chaion/wallet"
+               "link": { "apple": "app_store",
+                         "google": "play_store",
+                         "github": "https://github.com/chaion/wallet"
+                       }
              }
-            
-            
-            ], 
- 
- 
- 
- 
- 
- 
- 
- 
-            
- 
- 
- 
- 
- "team": [ 
+
+
+            ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+ "team": [
            {"pic": "pics/team/engineer - Camus Qiu.png",
             "role": "Engineer",
             "name": "Camus Qiu"
@@ -190,11 +196,11 @@
             "role": "Engineer",
             "name": "YuanJun Li"
            }
-        
+
           ]
-                 
 
- 
- 
 
-} 
+
+
+
+}

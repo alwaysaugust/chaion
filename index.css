@@ -1537,6 +1537,14 @@ body[data-lang='chinese'] .news_row .card_button img { top: 3.5px; }
                               }
 
 
+.modal_date { font-size: 18px;
+              text-align: center;
+              color: #14E7AA;
+              margin-bottom: 5%;
+              }
+
+
+
 .modal_icon { height: 100px;
               width: auto;
               position: relative;
@@ -1570,6 +1578,17 @@ body[data-lang='chinese'] .news_row .card_button img { top: 3.5px; }
             }
 
 
+
+
+.card_button_wrap { width: 80%;
+                    margin-top: 10%;
+                  }
+
+.card_button_wrap div { width: 30%; }
+
+.card_button_wrap div img { height: auto;
+                            width: 100%;
+                           }
 
 ._modal_button { width: 180px;
                  color: #14E7AA;
@@ -1888,3 +1907,102 @@ body { -webkit-animation: clip_body .5s;
 
 
 } /* end of keyframes */
+
+
+
+
+
+
+
+
+
+
+/* -- @@ BANNER --
+-------------------------
+*/
+
+
+._banner_space { top: 80px; }
+
+
+
+.fixed_banner { height: 80px;
+                width: 100%;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                overflow: hidden;
+                background: white;
+                z-index: 400;
+                display: none;
+                }
+
+
+
+.fixed_banner:before { content: "";
+                       height: 100%;
+                       width: 550px;
+                       position: absolute;
+                       right: 0px;
+                       top: 0px;
+                       background-image: url('graphics/banner/background-1.svg');
+                       background-size: auto 100%;
+                       background-position: right top;
+                       background-repeat: no-repeat;
+                      }
+
+
+.fixed_banner .center_col { height: 100%;
+                            max-width: 1500px;
+                           }
+
+
+.left_banner_block { color: #0D2342;
+                     font-size: 18px;
+                    }
+
+
+.left_banner_block div { margin-left: 35px;
+                         font-family: open-semi;
+                        }
+
+
+
+.banner_button { background-color: #0D2342;
+                 color: white;
+                 text-align: center;
+                 font-family: open-semi;
+                 font-size: 14px;
+                 border-radius: 5px;
+                 height: 36px;
+                 width: 146px;
+                 cursor: pointer;
+                 margin-right: 50px;
+                  }
+
+
+
+.close_banner { height: 26px;
+                width: 26px;
+                cursor: pointer;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -transform: rotate(45deg);}
+
+
+.close_banner:before,
+.close_banner:after { content: "";
+                      height: 100%;
+                      width: 1px;
+                      background-color: white;
+                      position: absolute;
+                      top: 0px;
+                      left: 50%;
+                      margin-left: -0.5px;
+                      }
+
+
+.close_banner:after { -webkit-transform: rotate(90deg);
+                      -moz-transform: rotate(90deg);
+                      transform: rotate(90deg);
+                    }
