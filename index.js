@@ -42,6 +42,67 @@ function close_banner(){
 
 
 
+// click banner button
+$( "body" ).on( "click", ".banner_button", function(){
+
+  var pos = (function(){
+
+  var n = $( "[data-link-from='roadmap']" ).offset().top;
+  return n - $(".header").outerHeight(true);
+
+  }) ();
+
+  $( window ).scrollTop( pos );
+
+ setTimeout( app_modal, 500);
+
+}); // end of click banner_button
+
+
+
+function app_modal() {
+
+  var par = $( '[data-app-details="true"]' ).parent();
+  var lang = $( "body").attr( 'data-lang' );
+  var icon = $( par ).find( ".col_icon img" ).attr( "src" );
+  var title = (function(){
+
+  if ( lang == "en") {
+    return $(par).attr( "data-en-title");
+  } else {
+    return $(par).attr( "data-chinese-title");
+  }
+
+  }) ();
+  var date = (function(){
+
+  if ( lang == "en") {
+    return $(par).attr( "data-en-date");
+  } else {
+    return $(par).attr( "data-chinese-date");
+  }
+
+  }) ();
+  var text = (function(){
+
+  if ( lang == "en") {
+    return $(par).attr( "data-en-text");
+  } else {
+    return $(par).attr( "data-chinese-text");
+  }
+
+  }) ();
+  var apple = $(par).attr( "data-link-apple" );
+  var google = $(par).attr( "data-link-google");
+  var git = $(par).attr( "data-link-git");
+  var info = [title,date,text];
+  var links = [apple,google,git];
+
+  modal(icon,info,links,"app");
+
+
+}
+
 
 
 // -- @ HEADER
