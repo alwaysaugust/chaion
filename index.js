@@ -342,8 +342,8 @@ $( "body" ).on("click", "._toggle_lang", function(){
    $(this).attr( "data-lang", "en" );
 
  }
- var lang = $(this).attr( "data-lang" );
 
+ var lang = $(this).attr( "data-lang" );
 
  toggle_lang( lang );
 
@@ -1278,7 +1278,7 @@ function mobile_menu(){
              <div class='menu_link' data-alt-lang data-en='News' data-chinese='新闻' data-link-to='news'> News </div>\
              <div class='header_button_wrap flex_row_inline'>\
              <div class='header_button _contact_us flex_center_row'  data-alt-lang data-en='Contact Us' data-chinese='联系我们'> Contact Us </div>\
-             <div class='header_button _toggle_lang flex_center_row'> <div data-alt-lang data-chinese='English' data-en='Chinese'>English</div> <img src='graphics/misc/down-triangle.svg'> </div>\
+             <div class='header_button _toggle_lang flex_center_row'> <div data-alt-lang data-chinese='English' data-en='Chinese'>English</div> </div>\
              </div> <!-- end of header_button_wrap --> \
             </div>";
 
