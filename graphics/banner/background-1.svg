@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="440px" height="80px" viewBox="0 0 440 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 29</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="46.4625332%" x2="61.1075438%" y2="46.4625332%" id="linearGradient-1">
+            <stop stop-color="#27E1AF" offset="0%"></stop>
+            <stop stop-color="#2C80FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_v7@2x" transform="translate(-1000.000000, 0.000000)" fill-rule="nonzero">
+            <g id="Group-29" transform="translate(1000.000000, 0.000000)">
+                <polygon id="Rectangle" fill="url(#linearGradient-1)" points="85.0496326 0 442 0 442 80 35 80"></polygon>
+                <polygon id="Rectangle-Copy-7" fill="#27DBB4" points="49.6411815 0 69 0 19.3588185 80 0 80"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
