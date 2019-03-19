@@ -1278,7 +1278,7 @@ function mobile_menu(){
              <div class='menu_link' data-alt-lang data-en='News' data-chinese='新闻' data-link-to='news'> News </div>\
              <div class='header_button_wrap flex_row_inline'>\
              <div class='header_button _contact_us flex_center_row'  data-alt-lang data-en='Contact Us' data-chinese='联系我们'> Contact Us </div>\
-             <div class='header_button _lang _toggle_lang flex_center_row'> <div data-alt-lang data-chinese='中文版' data-en='English'>English</div> <img src='graphics/misc/down-triangle.svg'> </div>\
+             <div class='header_button _toggle_lang flex_center_row'> <div data-alt-lang data-chinese='English' data-en='Chinese'>English</div> <img src='graphics/misc/down-triangle.svg'> </div>\
              </div> <!-- end of header_button_wrap --> \
             </div>";
 
@@ -1287,8 +1287,21 @@ function mobile_menu(){
 
  $( "body" ).addClass( "_clip" ).append( menu );
 
+ var top = (function(){
 
- $( ".mobile_menu" ).css("top", $( ".header" ).outerHeight(true) );
+  if ( $(".fixed_banner").is(":visible") ){
+
+   return $( ".header" ).outerHeight(true) + $( ".fixed_banner").height();
+
+ } else {
+
+  return $( ".header" ).outerHeight(true);
+
+ }
+
+ }) ();
+
+ $( ".mobile_menu" ).css("top", top );
 
  var lang = $( "body" ).attr( "data-lang" );
 
