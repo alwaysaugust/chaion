@@ -767,6 +767,17 @@
 
 .modal { padding: 10% 0px; }
 
+.modal_icon { height: 60px; }
+
+.modal_icon._round { width: 60px; }
+
+.modal_text { font-size: 11px;
+              line-height: 19px;
+             }
+
+.modal_date,
+.modal_title { font-size: 13px; }
+
 .card_button_wrap { width: 110px; }
 
 .card_button_wrap div { width: 100%; }

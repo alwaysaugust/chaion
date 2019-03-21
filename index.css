@@ -1623,6 +1623,12 @@ body[data-lang='chinese'] ._modal_button img { top: 2px; }
 
 
 
+/* unclickable button */
+._cant_click { cursor:  auto;
+               opacity: .46;
+              }
+
+._cant_click a { display: none; }
 
 
 
@@ -1922,18 +1928,18 @@ body { -webkit-animation: clip_body .5s;
 */
 
 
-._banner_space { top: 80px; }
+._banner_space { top: 68px; }
 
 
 
-.fixed_banner { height: 80px;
+.fixed_banner { height: 68px;
                 width: 100%;
                 position: fixed;
                 top: 0px;
                 left: 0px;
                 overflow: hidden;
                 background: white;
-                z-index: 400;
+                z-index: 40;
                 display: none;
                 }
 
