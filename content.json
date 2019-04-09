@@ -120,8 +120,8 @@
                             "chinese": "发布日期：2019年3月"
                           },
                "icon": "graphics/icons/roadmap/icon-3.svg",
-               "info": { "title": { "en": "Aion Wallet App", "chinese": "Aion钱包App" },
-                         "date": { "en": "Released Mar 31, 2019", "chinese": "发布日期：2019年3月" },
+               "info": { "title": { "en": "Makkii", "chinese": "Makkii" },
+                         "date": { "en": "Released Apr 1, 2019", "chinese": "发布于2019年4月1日" },
                          "text": { "en": "Makkii is a secure, convenient, and trusted Crypto asset management tool. In the future, we aim to focus on improving the user experience and adding feature that will facilitate the wallet's integration into a users daily life.",
                                    "chinese": "Makkii是一款安全、便捷、可信任的数字资产管理工具。未来将逐步提高用户对产品的体验与差异化功能的使用，实现未来数字货币在日常生活中的商业用途。"
                          }

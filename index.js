@@ -832,7 +832,7 @@ function modal(x,y,z,a){
              <div class='card_button_wrap flex_row_wrap _flex_space_between'>\
              <div> <img src='graphics/stores/android.svg'> <a href='"+z[2]+"' class='fixed_link'></a> </div> \
              <div> <img src='graphics/stores/google.svg'> <a href='"+z[1]+"' class='fixed_link'></a> </div> \
-             <div class='_cant_click'> <img src='graphics/stores/coming-soon.svg'> <a href='"+z[0]+"' class='fixed_link'></a> </div> \
+             <div> <img src='graphics/stores/apple.svg'> <a href='"+z[0]+"' class='fixed_link'></a> </div> \
              </div>\
             </div> <!-- end of center_col -->\
             <div class='close_button _close_modal'></div>\
