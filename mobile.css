@@ -10,9 +10,10 @@
 
 
 .header { border-bottom: solid 2px rgba(250,250,250,.15);
-          padding: 15px 0px;
           height: auto;
          }
+    
+.header .center_col._1 { padding: 15px 0px; }
 
 
 .header_buttons_row,
@@ -810,7 +811,8 @@
 
 ._banner_space { top: 50px; }
 
-.fixed_banner { height: 50px; }
+.fixed_banner { height: 50px;
+             }
 
 .left_banner_block img { display: none; }
 

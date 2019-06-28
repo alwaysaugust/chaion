@@ -95,14 +95,14 @@
 
 
 
- "roadmap": [{ "projection": { "en": "May 2018 ~ January 2019",
-                               "chinese": "2018年5月-2019年1月"
+ "roadmap": [{ "projection": { "en": "May 2018 - January 2019",
+                               "chinese": "2018年5月 - 2019年1月"
                              },
                "tech": { "en": "Aion Rust Kernel (Version:0.1.1)",
                          "chinese": "Aion Rust Kernel（版本：0.1.1）"
                        },
-               "release": { "en": " Release Date: Jan 23, 2019",
-                            "chinese": "发布日期：2019年1月23日"
+               "release": { "en": " Release Date - Jan 23, 2019",
+                            "chinese": "发布日期 - 2019年1月23日"
                           },
                "icon": "graphics/icons/roadmap/icon-1.svg",
                "info": { "en": "A second build of the Aion Kernel to supplement our Java implementation. The implementation of multiple kernels opens the door for diverse enhancement at the module level.",
@@ -110,18 +110,18 @@
                        },
                "link": "https://github.com/aionnetwork/aionr"
              },
-             { "projection": { "en": "January 2019 ~ Present",
-                               "chinese": "2019年1月-至今"
+             { "projection": { "en": "January 2019 - Present",
+                               "chinese": "2019年1月 - 至今"
                              },
                "tech": { "en": "Aion Wallet App (Demo version)",
                          "chinese": "Aion钱包App（试用版）"
                        },
-               "release": { "en": "Released Mar 31, 2019 ",
-                            "chinese": "发布日期：2019年3月"
+               "release": { "en": "Released - Mar 31, 2019 ",
+                            "chinese": "发布日期 - 2019年3月"
                           },
                "icon": "graphics/icons/roadmap/icon-3.svg",
                "info": { "title": { "en": "Makkii", "chinese": "Makkii" },
-                         "date": { "en": "Released Apr 1, 2019", "chinese": "发布于2019年4月1日" },
+                         "date": { "en": "Released - Apr 1, 2019", "chinese": "发布于2019年4月1日" },
                          "text": { "en": "Makkii is a secure, convenient, and trusted Crypto asset management tool. In the future, we aim to focus on improving the user experience and adding feature that will facilitate the wallet's integration into a users daily life.",
                                    "chinese": "Makkii是一款安全、便捷、可信任的数字资产管理工具。未来将逐步提高用户对产品的体验与差异化功能的使用，实现未来数字货币在日常生活中的商业用途。"
                          }
@@ -131,18 +131,18 @@
                          "github": "https://github.com/chaion/wallet"
                        }
              },
-             { "projection": { "en": "April 2019-June 2019",
-                               "chinese": "2019年4月-2019年6月"
+             { "projection": { "en": "April 2019 - June 2019",
+                               "chinese": "2019年4月 - 2019年6月"
                              },
-               "tech": { "en": "Makkii App(V1.0.0)",
-                         "chinese": "Makkii App(V1.0.0)"
+               "tech": { "en": "Makkii App (V1.0.0)",
+                         "chinese": "Makkii App (V1.0.0)"
                        },
-               "release": { "en": "Released: Jun 28,2019",
-                            "chinese": "发布日期：2019年6月28日"
+               "release": { "en": "Released - Jun 28, 2019",
+                            "chinese": "发布日期 - 2019年6月28日"
                           },
                "icon": "graphics/icons/roadmap/icon-3.svg",
-               "info": { "title": { "en": "Makkii App(V1.0.0)", "chinese": "Makkii App(V1.0.0)" },
-                         "date": { "en": "Released: Jun 28,2019", "chinese": "发布日期：2019年6月28日" },
+               "info": { "title": { "en": "Makkii App (V1.0.0)", "chinese": "Makkii App (V1.0.0)" },
+                         "date": { "en": "Released - Jun 28, 2019", "chinese": "发布日期 - 2019年6月28日" },
                          "text": { "en": "1.Support Multi-currency storage andtransfer<br>2.Support ATS and ERC 20 Token<br>3.Assets inquiry of multiple exchangerates<br>4.Multilingual service<br>5.Private key export multiple options<br>6.App upgrade tips",
                                    "chinese": "1.支持多币种存储与转出<br>2.支持ATS与ERC 20 Token<br>3.多种兑换汇率资产查询<br>4.多语言服务<br>5.私钥导出多选择<br>6.App更新提示"
                          }

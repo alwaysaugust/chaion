@@ -266,14 +266,14 @@ div { height: auto;
 
 
 /* -- header -- */
-.header { height: 84px;
+.header { height: auto;
           width: 100%;
           position: fixed;
           top: 0px;
           left: 0px;
           z-index: 75;
           background: #2C80FF;
-        }
+         }
 
 
 
@@ -290,9 +290,10 @@ div { height: auto;
                align-self: center;
              }
 
-.header .center_col { height: 100%;
-                      max-width: 1500px;
-                    }
+.header .center_col._1 { height: 100%;
+                         max-width: 1500px;
+                         padding: 23px 0px;
+                         }
 
 
 .header_links_row { height: 100%; }
@@ -358,7 +359,7 @@ div { height: auto;
                           width: 60px;
                           background: #14E7AA;
                           position: absolute;
-                          bottom: 0px;
+                          bottom: -29px;
                           left: 50%;
                           margin-left: -30px;
                           border-radius: 100px;
@@ -470,7 +471,7 @@ div { height: auto;
 /* frame */
 .frame { width: 100%;
          overflow: hidden;
-        }
+         }
 
 
 
@@ -1929,20 +1930,42 @@ body { -webkit-animation: clip_body .5s;
 */
 
 
-._banner_space { top: 68px; }
+._banner_space { top: 68px;
+                 -webkit-transition: .45s ease;
+                 -moz-transition: .45s ease;
+               }
 
 
 
 .fixed_banner { height: 68px;
                 width: 100%;
-                position: fixed;
+                position: relative;
                 top: 0px;
                 left: 0px;
                 overflow: hidden;
                 background: white;
                 z-index: 40;
-                display: none;
-                }
+                /*-webkit-animation: show_banner .45s ease;
+                -moz-animation: show_banner .45s ease;
+                -webkit-animation-delay: 3s; 
+                -webkit-animation-fill-mode: backwards;*/
+              }
+
+
+
+@-webkit-keyframes show_banner {
+
+0%    { top: -68px; }
+100%  { top: 0px;}
+    
+} /* end of keyframes */
+
+@-moz-keyframes show_banner {
+
+0%    { top: -68px; }
+100%  { top: 0px;}
+    
+} /* end of keyframes */
 
 
 

@@ -15,15 +15,15 @@ $( document ).ready(function(){
 
 
 // show banner
+
 setTimeout(function(){
 
 
-  $( ".header, .frame" ).addClass( "_banner_space" );
-  $( ".fixed_banner" ).show();
+  $( ".frame" ).addClass( "_banner_space" );
 
   store_pos();
 
-}, 4500);
+}, 3000);
 
 
 
