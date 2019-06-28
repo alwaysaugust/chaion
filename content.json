@@ -130,6 +130,27 @@
                          "google": "play_store",
                          "github": "https://github.com/chaion/wallet"
                        }
+             },
+             { "projection": { "en": "April 2019-June 2019",
+                               "chinese": "2019年4月-2019年6月"
+                             },
+               "tech": { "en": "Makkii App(V1.0.0)",
+                         "chinese": "Makkii App(V1.0.0)"
+                       },
+               "release": { "en": "Released: Jun 28,2019",
+                            "chinese": "发布日期：2019年6月28日"
+                          },
+               "icon": "graphics/icons/roadmap/icon-3.svg",
+               "info": { "title": { "en": "Makkii App(V1.0.0)", "chinese": "Makkii App(V1.0.0)" },
+                         "date": { "en": "Released: Jun 28,2019", "chinese": "发布日期：2019年6月28日" },
+                         "text": { "en": "1.Support Multi-currency storage andtransfer<br>2.Support ATS and ERC 20 Token<br>3.Assets inquiry of multiple exchangerates<br>4.Multilingual service<br>5.Private key export multiple options<br>6.App upgrade tips",
+                                   "chinese": "1.支持多币种存储与转出<br>2.支持ATS与ERC 20 Token<br>3.多种兑换汇率资产查询<br>4.多语言服务<br>5.私钥导出多选择<br>6.App更新提示"
+                         }
+                       },
+               "link": { "apple": "app_store",
+                         "google": "play_store",
+                         "github": "https://github.com/chaion/wallet"
+                       }
              }
 
 
