@@ -1041,7 +1041,8 @@ body[data-lang='chinese'] ._show_map div:before { content: "展开"; }
                   margin: 0 auto;
                   padding: 5% 0px;
                   overflow-x: hidden;
-                 }
+                  overflow-y: visible;
+                 } 
 
 
 .card_scroll_wrapper { max-width: 360px;
