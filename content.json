@@ -124,7 +124,8 @@
                          "date": { "en": "Released - Apr 1, 2019", "chinese": "发布于2019年4月1日" },
                          "text": { "en": "Makkii is a secure, convenient, and trusted Crypto asset management tool. In the future, we aim to focus on improving the user experience and adding feature that will facilitate the wallet's integration into a users daily life.",
                                    "chinese": "Makkii是一款安全、便捷、可信任的数字资产管理工具。未来将逐步提高用户对产品的体验与差异化功能的使用，实现未来数字货币在日常生活中的商业用途。"
-                         }
+                         },
+                        "default": "false"
                        },
                "link": { "apple": "app_store",
                          "google": "play_store",
@@ -145,7 +146,8 @@
                          "date": { "en": "Released - Jun 28, 2019", "chinese": "发布日期 - 2019年6月28日" },
                          "text": { "en": "1.Support Multi-currency storage andtransfer<br>2.Support ATS and ERC 20 Token<br>3.Assets inquiry of multiple exchangerates<br>4.Multilingual service<br>5.Private key export multiple options<br>6.App upgrade tips",
                                    "chinese": "1.支持多币种存储与转出<br>2.支持ATS与ERC 20 Token<br>3.多种兑换汇率资产查询<br>4.多语言服务<br>5.私钥导出多选择<br>6.App更新提示"
-                         }
+                         },
+                        "default": "true"
                        },
                "link": { "apple": "app_store",
                          "google": "play_store",

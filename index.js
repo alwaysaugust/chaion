@@ -62,7 +62,7 @@ $( "body" ).on( "click", ".banner_button", function(){
 
 function app_modal() {
 
-  var par = $( '[data-app-details="true"]' ).parent();
+  var par = $( '[data-default="true"]' ).parent();
   var lang = $( "body").attr( 'data-lang' );
   var icon = $( par ).find( ".col_icon img" ).attr( "src" );
   var title = (function(){
@@ -1040,7 +1040,7 @@ function show_roadmap(data){
                  <div class='col_text _title' data-alt-lang data-en='"+data[i].projection.en+"' data-chinese='"+data[i].projection.chinese+"'>"+data[i].projection.en+" </div>\
                  <div class='col_text _thin' data-alt-lang data-en='"+data[i].tech.en+"' data-chinese='"+data[i].tech.chinese+"'>"+data[i].tech.en+" </div>\
                  <div class='col_text _thin' data-alt-lang data-en='"+data[i].release.en+"' data-chinese='"+data[i].release.chinese+"'>"+data[i].release.en+" </div>\
-                 <button class='timeline_button _bg_gradient_2 _view_details' data-app-details='true'> <div data-alt-lang data-en='View Details' data-chinese='查看详情'>View Details</div> </button>\
+                 <button class='timeline_button _bg_gradient_2 _view_details' data-app-details='true' data-default='"+data[i].info.default+"'> <div data-alt-lang data-en='View Details' data-chinese='查看详情'>View Details</div> </button>\
                 </div> <!-- end of time_col -->";
 
 
